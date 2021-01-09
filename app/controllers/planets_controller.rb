@@ -10,7 +10,7 @@ class PlanetsController < ApplicationController
   def create
     @planet = Planet.new(planets_params)
     if @planet.save
-      redirect_to planets_path
+      redirect_to planet_path
     else
       render :new
     end
