@@ -1,11 +1,11 @@
 class BookingsController < ApplicationController
+  before_action :set_planet, only: [:new, :create]
+
   def new
-    @planet = Planet.find(params[:planet_id])
     @booking = Booking.new
   end
 
   def create
-    @planet = Planet.find(params[:planet_id])
     @booking = Booking.new(booking_params)
     @booking.planet = @planet
     if @booking.save
@@ -16,6 +16,10 @@ class BookingsController < ApplicationController
   end
 
   private
+
+  def set_planet
+    @planet = Planet.find(params[:planet_id])
+  end
 
   def booking_params
     params.require(:booking).permit(:user_id, :start_date, :end_date)
