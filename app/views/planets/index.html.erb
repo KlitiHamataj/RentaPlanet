@@ -5,9 +5,10 @@
   <div class="card-planet">
     <img src="#" alt="">
     <div class="card-planet-infos">
-      <h2><%= planet.name %></h2>
+      <h2><%= link_to planet.name, planet_path(planet) %></h2>
       <p><%= planet.description %></p>
       <h2 class="card-planet-price"><%= planet.price %></h2>
+
     <% end %>
     </div>
 

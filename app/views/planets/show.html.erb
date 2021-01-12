@@ -1,7 +1,16 @@
 <h1> <%= planet.name %></h1>
-<% @planet.each do |element| %>
-<p><%= planet.description %></p>
-<p><%= planet.address %></p>
-<p><%= planet.price %></p>
-<p><%= planet.number_guests %></p>
-  <% end %>
+<div class="container">
+  <% @planet.each do |element| %>
+    <ul>
+      <li><%= planet.description %></li>
+      <li><%= planet.address %></li>
+      <li><%= planet.price %></li>
+      <li><%= planet.number_guests %></li>
+    </ul>
+    <% end %>
+  <div>
+    <%= link_to "Edit the planet", edit_planet_path %>
+    <%= link_to "Back to all planets", root_path%>
+    </div>
+</div>
+
