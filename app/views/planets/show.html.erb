@@ -1,0 +1,16 @@
+<h1><%= @planet.name %></h1>
+
+<div class="container">
+<div class="row">
+  <div class="col-6">
+    <% @planets.each do |planet| %>
+    <p><%= planet.description %></p>
+    <p><%= planet.address %> </p>
+    <p><%= planet.price %> </p>
+    <p><%= planet.number_guests %> </p>
+    <% end %>
+  </div>
+  <%= link_to "Update your planet", edit_planet_path %>
+  <%= link_to "Back to all planets", root_path%>
+</div>
+</div>
