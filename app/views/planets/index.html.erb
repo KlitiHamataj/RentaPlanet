@@ -1,0 +1,14 @@
+<h1>All planets</h1>
+
+<div class="container">
+  <% @planets.each do |planet| %>
+  <div class="card-planet">
+    <img src="#" alt="">
+    <div class="card-planet-infos">
+      <h2><%= planet.name %></h2>
+      <p><%= planet.description %></p>
+    <% end %>
+    </div>
+    <h2 class="card-planet-price"><%= planet.price %></h2>
+  </div>
+</div>
