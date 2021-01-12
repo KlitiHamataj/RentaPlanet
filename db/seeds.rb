@@ -13,7 +13,7 @@ puts 'Users created...'
 puts 'Creating planets...'
 
 5.times do |i|
-    Planet.create!(
+    planet = Planet.create!(
       name: Faker::Name.unique.name,
       description: Faker::Movies::HitchhikersGuideToTheGalaxy.quote,
       address: Faker::Space.galaxy,
