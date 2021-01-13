@@ -1,42 +1,54 @@
 // Specific CSS for your home-page
-img {
+@font-face {
+   font-family: 'OneDay';
+   src: url('/assets/OneDay.otf')
+}
+
+@font-face {
+  font-family: 'Stellar-light';
+  src: url('/assets/Stellar-light.otf');
+}
+
+.banner {
+  position: relative;
+}
+
+#milky-way {
   height: 100%;
   width: 100%;
 }
 
-.container {
-  position: relative;
-}
-
-.text-block {
-  font-family: 'Spectral';
-  font-weight: lighter;
+.text-banner {
+  font-family: 'OneDay';
+  font-size: 15px;
   text-shadow: 0 0 10px #FFFFFF;
   position: absolute;
   color: #FFFFFF;
   bottom: 450px;
+  letter-spacing: 0.1em;
+  margin-left: 100px;
 }
 
-.btn {
+h1 {
+  font-family: 'OneDay';
+  letter-spacing: 0.1em;
+}
+
+.btn-banner {
+  font-family: 'Stellar-light';
+  letter-spacing: 0.1em;
   box-shadow:inset 0px 1px 0px 0px #ffffff;
   background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
   background-color:#ffffff;
-  border-radius:6px;
+  border-radius:5px;
   border:1px solid #dcdcdc;
   display:inline-block;
   cursor:pointer;
   color:#666666;
-  font-family:'Spectral';
-  font-size:16px;
-  padding:6px 24px;
+  opacity: 0.9;
+  text-align: center;
+  font-size:14px;
+  padding:6px 12px;
   text-decoration:none;
   text-shadow:0px 1px 0px #ffffff;
-}
-.btn:hover {
-  background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
-  background-color:#f6f6f6;
-}
-.btn:active {
-  position:relative;
-  top:1px;
 }
