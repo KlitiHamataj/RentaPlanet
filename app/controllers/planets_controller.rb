@@ -1,6 +1,11 @@
 class PlanetsController < ApplicationController
+  before_action :set_planet, only: [:show]
+
   def index
     @planets = Planet.all
+  end
+
+  def show
   end
 
   def new
@@ -22,4 +27,9 @@ class PlanetsController < ApplicationController
   def planet_params
     params.require(:planet).permit(:name, :description, :address, :price, :number_guests, photos: [])
   end
+
+  def set_planet
+    @planet = Planet.find(params[:id])
+  end
+  
 end
