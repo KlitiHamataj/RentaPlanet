@@ -10,28 +10,27 @@
 }
 
 .banner {
-  position: absolute;
+  height: 750px;
+  background-image: url('/assets/banner.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-#milky-way {
-  height: 100%;
-  width: 100%;
-}
-
-.text-banner {
+.text-banner h1, p {
   font-family: 'OneDay';
-  font-size: 15px;
-  text-shadow: 0 0 10px #FFFFFF;
-  position: relative;
   color: #FFFFFF;
-  bottom: 600px;
+  text-shadow: 0 0 10px #FFFFFF;
   letter-spacing: 0.1em;
-  margin-left: 100px;
+  padding-left : 100px;
 }
 
-h1 {
-  font-family: 'OneDay';
-  letter-spacing: 0.1em;
+.text-banner h1 {
+  font-size: 40px;
+  padding-top: 100px;
+}
+
+.text-banner p {
+  font-size: 16px;
 }
 
 .btn-banner {
@@ -46,10 +45,11 @@ h1 {
   color: #666666;
   opacity: 0.9;
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
   padding: 6px 12px;
   text-decoration: none;
   text-shadow: 0px 1px 0px #ffffff;
+  margin-left: 100px;
 }
 
 .btn-banner:hover {
@@ -57,31 +57,22 @@ h1 {
   background-color:#f6f6f6;
 }
 
-.btn-banner:active {
-  position:relative;
-  top: 1px;
-}
-
 .search-form {
   opacity: 0.8;
   position: relative;
   font-family: 'Stellar-light';
-  margin-left: 800px;
-  margin-right: 200px;
+  color: #FFFFFF;
+  text-shadow: 0 0 10px #FFFFFF;
+  margin-left: 950px;
+  margin-right: 250px;
   background: rgba(0,0,0,0.5);
   border-radius: 5px;
-  padding: 10px 0px 0px 0px;
-  bottom: 20px;
+  padding: 10px 10px 0px 10px;
 }
 
 .form-control {
   border-radius: 5px;
   font-family: sans-serif;
-}
-
-.col-lg-7 {
-  width: 50%;
-  margin-right: 0px;
 }
 
 .btn-search {
