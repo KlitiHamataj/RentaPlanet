@@ -1,3 +1,4 @@
+
 <div class="navbar sticky-top navbar-expand-sm navbar-light navbar-lewagon">
   <%= link_to root_path, class: "navbar-brand" do %>
     <i class="fas fa-rocket" style="font-size: 2rem"></i>
@@ -12,6 +13,7 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item active">
+
           <%= link_to "Planets", planets_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
