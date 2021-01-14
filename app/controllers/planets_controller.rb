@@ -1,5 +1,5 @@
 class PlanetsController < ApplicationController
-  before_action :set_planet, only: [:show, :edit, :update]
+  before_action :set_planet, only: [:show, :edit, :update, :destroy]
 
   def index
     @planets = Planet.all
@@ -33,6 +33,11 @@ class PlanetsController < ApplicationController
     end
   end
 
+  def destroy
+    @planet.destroy
+    redirect_to planets_path, notice: 'Your planet has been deleted successfully.'
+  end
+  
   private
 
   def planet_params
