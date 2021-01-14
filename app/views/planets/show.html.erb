@@ -6,5 +6,6 @@
      <h5 class="card-text">Guest number: <%= @planet.number_guests %></h5>
      <%= link_to "Update", edit_planet_path %>
      <%= link_to "Back", root_path%>
+     <%= link_to "Make a booking", new_planet_booking_path(@planet, @booking) %>
    </div>
 </div>

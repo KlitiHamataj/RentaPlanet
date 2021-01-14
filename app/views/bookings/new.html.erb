@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <%= simple_form_for [@planet, @booking] do |f| %>
+      <%= f.input :start_date, as: :date %>
+      <%= f.input :end_date, as: :date %>
+      <%= f.submit class: "btn btn-primary"%>
+    <% end %>
+  </div>
+</div>
+<footer>
+  <span class="navbar-brand mb-0 h1 navbar-cocktail fixed-bottom" style="background-color: #ffffff;">Cocktail-wise</span>
+</footer>
+
