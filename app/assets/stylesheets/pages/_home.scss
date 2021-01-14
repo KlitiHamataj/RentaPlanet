@@ -9,112 +9,69 @@
   src: url('/assets/Stellar-light.otf');
 }
 
-body {
+.background-black {
   background-color: black;
-}
 
-.banner {
-  height: 750px;
-  background-image: url('/assets/banner.jpeg');
-  background-size: cover;
-  background-repeat: no-repeat;
-}
+  .banner {
+    height: 750px;
+    background-image: url('/assets/banner.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 
-.text-banner h1, p {
-  font-family: 'OneDay';
-  color: #FFFFFF;
-  text-shadow: 0 0 10px #FFFFFF;
-  letter-spacing: 0.1em;
-  padding-left : 100px;
-}
+  .text-banner h1, p {
+    font-family: 'OneDay';
+    color: #FFFFFF;
+    text-shadow: 0 0 10px #FFFFFF;
+    letter-spacing: 0.1em;
+    padding-left : 100px;
+  }
 
-.text-banner h1 {
-  font-size: 40px;
-  padding-top: 100px;
-}
+  .text-banner h1 {
+    font-size: 40px;
+    padding-top: 100px;
+  }
 
-.text-banner p {
-  font-size: 16px;
-}
+  .text-banner p {
+    font-size: 16px;
+  }
 
-.btn-banner {
-  font-family: 'Stellar-light';
-  letter-spacing: 0.1em;
-  box-shadow:inset 0px 1px 0px 0px #ffffff;
-  background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
-  background-color:#ffffff;
-  border-radius: 5px;
-  border: 1px solid #dcdcdc;
-  cursor: pointer;
-  color: #666666;
-  opacity: 0.9;
-  text-align: center;
-  font-size: 16px;
-  padding: 6px 12px;
-  text-decoration: none;
-  text-shadow: 0px 1px 0px #ffffff;
-  margin-left: 100px;
-}
+  .search-form {
+    opacity: 0.8;
+    position: relative;
+    font-family: 'Stellar-light';
+    color: #FFFFFF;
+    text-shadow: 0 0 10px #FFFFFF;
+    margin-left: 950px;
+    margin-right: 250px;
+    background: rgba(0,0,0,0.5);
+    border-radius: 5px;
+    padding: 10px 10px 0px 10px;
+    border: 1px solid rgb(230,230,230);
+    box-shadow: 0 0 5px rgb(230,230,230);
+  }
 
-.btn-banner:hover {
-  background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
-  background-color:#f6f6f6;
-}
+  .form-control {
+    border-radius: 5px;
+    font-family: sans-serif;
+  }
 
-.search-form {
-  opacity: 0.8;
-  position: relative;
-  font-family: 'Stellar-light';
-  color: #FFFFFF;
-  text-shadow: 0 0 10px #FFFFFF;
-  margin-left: 950px;
-  margin-right: 250px;
-  background: rgba(0,0,0,0.5);
-  border-radius: 5px;
-  padding: 10px 10px 0px 10px;
-  border: 1px solid rgb(230,230,230);
-  box-shadow: 0 0 5px rgb(230,230,230);
-}
+  .btn-search {
+    border-radius: 5px;
+  }
 
-.form-control {
-  border-radius: 5px;
-  font-family: sans-serif;
-}
+  .solar-system h2 {
+    font-size: 24px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 0px;
+    text-align: center;
+  }
 
-.btn-search {
-  border-radius: 5px;
-}
-
-.container {
-}
-
-.container h2 {
-  font-size: 24px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  margin-bottom: 0px;
-  text-align: center;
-}
-
-.container h2, p {
-  font-family: 'OneDay';
-  color: #FFFFFF;
-  text-shadow: 0 0 10px #FFFFFF;
-  letter-spacing: 0.1em;
-}
-
-.cards {
-  display: flex;
-  justify-content: space-around;
-}
-
-.cards-planet {
-  margin-bottom: 30px;
-  width: 250px;
-  height: 250px;
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgb(230,230,230);
-  text-align: right;
-  padding: 20px;
-  border: 1px solid rgb(230,230,230);
+  .solar-system h2, p {
+    font-family: 'OneDay';
+    color: #FFFFFF;
+    text-shadow: 0 0 10px #FFFFFF;
+    letter-spacing: 0.1em;
+  }
 }
