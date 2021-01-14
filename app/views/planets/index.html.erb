@@ -1,15 +1,24 @@
-<h1>All planets</h1>
-
 <div class="container">
-  <% @planets.each do |planet| %>
-  <div class="card-planet">
-    <img src="#" alt="">
-    <div class="card-planet-infos">
-      <h2><%= planet.name %></h2>
-      <p><%= planet.description %></p>
-      <h2 class="card-planet-price"><%= planet.price %></h2>
-    <% end %>
-    </div>
 
+  <h1>All planets</h1>
+
+  <div class="container">
+    <% @planets.each do |planet| %>
+    <div class="card-planet">
+      <% if planet.photos.attached? %>
+        <%= cl_image_tag planet.photos.first.key, height: 200, width: 200, crop: :fill %>
+      <% else %>
+        <%= image_tag('planet_blue.jpg', height: 200, width: 200) %>
+      <% end %>
+      <div class="card-planet-infos">
+        <h2><%= planet.name %></h2>
+        <p><%= planet.description %></p>
+        <h2 class="card-planet-price"><%= planet.price %></h2>
+        <%= link_to "See More", planet_path(planet) %>
+      <% end %>
+      </div>
+
+    </div>
   </div>
+
 </div>
