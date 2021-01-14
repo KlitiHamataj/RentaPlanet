@@ -4,7 +4,7 @@
      <h5 class="card-text">Address: <%= @planet.address %></h5>
      <h5 class="card-text">Price: <%= @planet.price %></h5>
      <h5 class="card-text">Guest number: <%= @planet.number_guests %></h5>
-     <%= link_to "Update", edit_planet_path %>
+     <%= link_to "Update", edit_planet_path(@planet) %>
      <%= link_to "Back", root_path%>
    </div>
 </div>
