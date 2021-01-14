@@ -1,5 +1,5 @@
 class PlanetsController < ApplicationController
-  before_action :set_planet, only: [:show]
+  before_action :set_planet, only: [:show, :edit]
 
   def index
     @planets = Planet.all
