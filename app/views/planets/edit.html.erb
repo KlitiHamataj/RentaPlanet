@@ -1,0 +1,15 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-6 m-auto">
+      <%= simple_form_for @planet do |f| %>
+        <%= f.input :name %>
+        <%= f.input :address %>
+        <%= f.input :price %>
+        <%= f.input :number_guests %>
+        <%= f.input :description %>
+        <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+        <%= f.button :submit, class:"btn btn-primary" %>
+     <% end %>
+    </div>
+  </div>
+</div>

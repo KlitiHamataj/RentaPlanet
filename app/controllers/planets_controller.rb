@@ -12,6 +12,9 @@ class PlanetsController < ApplicationController
     @planet = Planet.new
   end
 
+  def edit
+  end
+  
   def create
     @planet = Planet.new(planet_params)
     @planet.user = current_user
