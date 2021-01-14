@@ -1,5 +1,5 @@
 class PlanetsController < ApplicationController
-  before_action :set_planet, only: [:show, :edit]
+  before_action :set_planet, only: [:show, :edit, :update]
 
   def index
     @planets = Planet.all
@@ -22,6 +22,14 @@ class PlanetsController < ApplicationController
       redirect_to planet_path(@planet)
     else
       render :new
+    end
+  end
+
+  def update
+    if @planet.update(planet_params)
+      redirect_to planets_path, notice: 'Planet is updated'
+    else
+      render :edit
     end
   end
 
