@@ -8,10 +8,11 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @booking.planet = @planet
+    @booking.user = current_user
     if @booking.save
       redirect_to planet_path(@planet)
     else
-      render "planets/show"
+      render "new"
     end
   end
 
@@ -22,6 +23,6 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:user_id, :start_date, :end_date)
+    params.require(:booking).permit(:user_id, :start_date, :end_date, :number_of_guests)
   end
 end
