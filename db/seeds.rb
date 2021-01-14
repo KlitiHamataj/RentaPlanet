@@ -21,7 +21,8 @@ puts 'Creating planets...'
       number_guests: Faker::Number.number(digits: 5),
       user: User.find(i + 1),
     )
+    planet.photos.attach(io: File.open('app/assets/images/mars.jpeg'), filename: 'file.jpg', content_type: 'image/jpeg')
   end
 
-  puts 'Plantes created...'
+  puts 'Planets created...'
 
