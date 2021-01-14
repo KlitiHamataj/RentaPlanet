@@ -5,8 +5,11 @@
        <h5 class="card-text">Address: <%= @planet.address %></h5>
        <h5 class="card-text">Price: <%= @planet.price %></h5>
        <h5 class="card-text">Guest number: <%= @planet.number_guests %></h5>
-       <%= link_to "Update", edit_planet_path(@planet) %>
-       <%= link_to "Back", root_path%>
+       <% if current_user == @planet.user %>
+       <%= link_to "Edit", edit_planet_path(@planet) %>
+       <%= link_to "Delete", @planet, data: { confirm: "Are you sure?" }, :method => :delete %>
+       <% end %>
+       <%= link_to "Back", planets_path%>
        <%= link_to "Make a booking", new_planet_booking_path(@planet) %>
      </div>
   </div>
