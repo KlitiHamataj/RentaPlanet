@@ -9,6 +9,10 @@
   src: url('/assets/Stellar-light.otf');
 }
 
+body {
+  background-color: black;
+}
+
 .banner {
   height: 750px;
   background-image: url('/assets/banner.jpeg');
@@ -68,6 +72,8 @@
   background: rgba(0,0,0,0.5);
   border-radius: 5px;
   padding: 10px 10px 0px 10px;
+  border: 1px solid rgb(230,230,230);
+  box-shadow: 0 0 5px rgb(230,230,230);
 }
 
 .form-control {
@@ -77,4 +83,38 @@
 
 .btn-search {
   border-radius: 5px;
+}
+
+.container {
+}
+
+.container h2 {
+  font-size: 24px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+.container h2, p {
+  font-family: 'OneDay';
+  color: #FFFFFF;
+  text-shadow: 0 0 10px #FFFFFF;
+  letter-spacing: 0.1em;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+}
+
+.cards-planet {
+  margin-bottom: 30px;
+  width: 250px;
+  height: 250px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgb(230,230,230);
+  text-align: right;
+  padding: 20px;
+  border: 1px solid rgb(230,230,230);
 }
