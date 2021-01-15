@@ -2,7 +2,11 @@ class PlanetsController < ApplicationController
   before_action :set_planet, only: [:show, :edit, :update, :destroy]
 
   def index
-    @planets = Planet.all
+    if params[:query] == "my_planets"
+      @planets = Planet.where("user_id = ?", current_user)
+    else
+      @planets = Planet.all
+    end
   end
 
   def show
@@ -14,7 +18,7 @@ class PlanetsController < ApplicationController
 
   def edit
   end
-  
+
   def create
     @planet = Planet.new(planet_params)
     @planet.user = current_user
@@ -37,7 +41,7 @@ class PlanetsController < ApplicationController
     @planet.destroy
     redirect_to planets_path, notice: 'Your planet has been deleted successfully.'
   end
-  
+
   private
 
   def planet_params
@@ -47,5 +51,5 @@ class PlanetsController < ApplicationController
   def set_planet
     @planet = Planet.find(params[:id])
   end
-  
+
 end
