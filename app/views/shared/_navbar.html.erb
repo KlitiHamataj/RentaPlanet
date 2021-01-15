@@ -23,7 +23,8 @@
           <%= image_tag "user-astronaut.svg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "My planets", "#", class: "dropdown-item" %>
-            <%= link_to "My bookings", "#", class: "dropdown-item" %>
+            <%= link_to "Requests Sent", bookings_path(query: 'sent'), class: "dropdown-item" %>
+            <%= link_to "Requests Received", bookings_path(query: 'received'), class: "dropdown-item" %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>

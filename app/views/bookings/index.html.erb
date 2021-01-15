@@ -1,0 +1,18 @@
+<div class="container">
+  <% if params[:query] == 'sent' %>
+    <h1> Your Requests Sent </h1>
+  <% else  %>
+    <h1> Your Requests Received </h1>
+  <% end %>
+
+    <% @bookings.each do |booking| %>
+      <div class="cards cards-planet">
+        <%= booking.planet.name %>
+        <%= booking.start_date %>
+        <%= booking.end_date %>
+        <%= booking.user.username %>
+      </div>
+    <% end %>
+
+</div>
+
