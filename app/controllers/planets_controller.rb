@@ -7,6 +7,12 @@ class PlanetsController < ApplicationController
     else
       @planets = Planet.all
     end
+
+    if params[:query].present?
+      @planets = Planet.where("name ILIKE ?", "%#{params[:query]}%")
+    else
+      @planets = Planet.all
+    end
   end
 
   def show

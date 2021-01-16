@@ -50,6 +50,16 @@
 </div>
 <br>
 <%= link_to 'Explore worlds nearby', planets_path, type:"button", class:"btn btn-light rental-planet-main-btn"%>
+<div class="container">
+  <%= form_tag root_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find a planet"
+    %>
+    <%= submit_tag "Search", class: "btn btn-outline-warning" %>
+  <% end %>
+</div>
 <br>
 <div class="moons-satellites">
   <div class="cards-smaller">
