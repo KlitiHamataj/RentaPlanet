@@ -1,6 +1,10 @@
 class BookingsController < ApplicationController
   before_action :set_planet, only: [:new, :create]
 
+  def index
+    @bookings = Booking.where("user_id = ?", current_user)
+  end
+
   def new
     @booking = Booking.new
   end
