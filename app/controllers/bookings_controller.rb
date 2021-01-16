@@ -2,7 +2,11 @@ class BookingsController < ApplicationController
   before_action :set_planet, only: [:new, :create]
 
   def index
-    @bookings = Booking.where("user_id = ?", current_user)
+    if params[:query] == 'sent'
+      @bookings = Booking.where("user_id = ?", current_user)
+    else
+      @bookings = current_user.planets.map { |planet| planet.bookings }.flatten
+    end
   end
 
   def new
