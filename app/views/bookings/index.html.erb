@@ -4,15 +4,32 @@
   <% else  %>
     <h1> Your Requests Received </h1>
   <% end %>
-
-    <% @bookings.each do |booking| %>
-      <div class="cards cards-planet">
-        <%= booking.planet.name %>
-        <%= booking.start_date %>
-        <%= booking.end_date %>
-        <%= booking.user.username %>
-      </div>
-    <% end %>
-
 </div>
 
+<div class="container">
+  <% if @bookings.any? %>
+    <table>
+      <tr>
+        <th>Name of planet</th>
+        <th>Number of guests</th>
+        <th>Starting date</th>
+        <th>Ending data</th>
+      </tr>
+      <% @bookings.each do |booking| %>
+        <tr>
+          <td><%= booking.planet.name %></td>
+          <td><%= booking.number_of_guests %> </td>
+          <td><%= booking.start_date %></td>
+          <td><%= booking.end_date %></td>
+          <td><%= booking.user.username %></td>
+        </tr>
+        <% end %>
+    </table>
+  <% else %>
+      <h5 class="card-text">You currently have no bookings!</h5>
+  <% end %>
+</div>
+
+<div class="container">
+  <%= link_to "Back", root_path, class:"btn btn-outline-secondary" %>
+</div>
