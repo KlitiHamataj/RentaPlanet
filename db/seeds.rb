@@ -19,6 +19,8 @@ puts 'Creating planets...'
       address: Faker::Space.galaxy,
       price: Faker::Number.number(digits: 6),
       number_guests: Faker::Number.number(digits: 5),
+      latitude: Faker::Address.latitude,
+      longitude: Faker::Address.longitude,
       user: User.find(i + 1),
     )
     planet.photos.attach(io: File.open('app/assets/images/mars.jpeg'), filename: 'file.jpg', content_type: 'image/jpeg')
