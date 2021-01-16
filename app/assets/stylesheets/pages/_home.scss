@@ -9,69 +9,75 @@
   src: url('/assets/Stellar-light.otf');
 }
 
-.background-black {
-  background-color: black;
+.banner {
+  height: 750px;
+  background-image: url('/assets/banner.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
-  .banner {
-    height: 750px;
-    background-image: url('/assets/banner.jpeg');
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
+.text-banner h1, p {
+  font-family: 'OneDay';
+  color: #FFFFFF;
+  text-shadow: 0 0 10px #FFFFFF;
+  letter-spacing: 0.1em;
+  padding-left : 100px;
+}
 
-  .text-banner h1, p {
-    font-family: 'OneDay';
-    color: #FFFFFF;
-    text-shadow: 0 0 10px #FFFFFF;
-    letter-spacing: 0.1em;
-    padding-left : 100px;
-  }
+.text-banner h1 {
+  font-size: 40px;
+  padding-top: 100px;
+}
 
-  .text-banner h1 {
-    font-size: 40px;
-    padding-top: 100px;
-  }
+.text-banner p {
+  font-size: 16px;
+}
 
-  .text-banner p {
-    font-size: 16px;
-  }
+.search-form {
+  opacity: 0.8;
+  position: relative;
+  font-family: 'Stellar-light';
+  color: #FFFFFF;
+  text-shadow: 0 0 10px #FFFFFF;
+  margin-left: 950px;
+  margin-right: 250px;
+  background: rgba(0,0,0,0.5);
+  border-radius: 5px;
+  padding: 10px 10px 0px 10px;
+  border: 1px solid rgb(230,230,230);
+  box-shadow: 0 0 5px rgb(230,230,230);
+}
 
-  .search-form {
-    opacity: 0.8;
-    position: relative;
-    font-family: 'Stellar-light';
-    color: #FFFFFF;
-    text-shadow: 0 0 10px #FFFFFF;
-    margin-left: 950px;
-    margin-right: 250px;
-    background: rgba(0,0,0,0.5);
-    border-radius: 5px;
-    padding: 10px 10px 0px 10px;
-    border: 1px solid rgb(230,230,230);
-    box-shadow: 0 0 5px rgb(230,230,230);
-  }
+.form-control {
+  border-radius: 5px;
+  font-family: sans-serif;
+}
 
-  .form-control {
-    border-radius: 5px;
-    font-family: sans-serif;
-  }
+.btn-search {
+  border-radius: 5px;
+}
 
-  .btn-search {
-    border-radius: 5px;
-  }
+.solar-system {
+   background-color: black;
+}
 
-  .solar-system h2 {
-    font-size: 24px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    margin-bottom: 0px;
-    text-align: center;
-  }
+.solar-system h2 {
+  font-size: 24px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-bottom: 0px;
+  text-align: center;
+}
 
-  .solar-system h2, p {
-    font-family: 'OneDay';
-    color: #FFFFFF;
-    text-shadow: 0 0 10px #FFFFFF;
-    letter-spacing: 0.1em;
-  }
+.solar-system h2, p {
+  font-family: 'OneDay';
+  color: #FFFFFF;
+  text-shadow: 0 0 10px #FFFFFF;
+  letter-spacing: 0.1em;
+}
+
+.moons-satellites {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    margin-left: 205px;
 }
