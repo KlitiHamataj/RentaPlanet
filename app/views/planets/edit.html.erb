@@ -4,12 +4,12 @@
       <%= simple_form_for @planet do |f| %>
         <%= f.input :name %>
         <%= f.input :address %>
-        <%= f.input :price %>
-        <%= f.input :number_guests %>
+        <%= f.input :price, min_max: true, input_html: { step: 1000 } %>
+        <%= f.input :number_guests, min_max: true, input_html: { step: 10 } %>
         <%= f.input :description %>
         <%= f.input :photos, as: :file, input_html: { multiple: true } %>
         <%= f.button :submit, class:"btn btn-primary" %>
-     <% end %>
+      <% end %>
     </div>
   </div>
 </div>
