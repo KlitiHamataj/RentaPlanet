@@ -3,8 +3,6 @@
       <h1>Welcome to Rental Planet</h1>
       <p>The luxury space vacation rentals</p>
 
-      <%= link_to 'Explore worlds nearby', planets_path, type:"button", class:"btn btn-light rental-planet-main-btn"%>
-
    </div>
    <div class="search-form">
       <div class="row">
@@ -26,7 +24,7 @@
                   <input type="date" class="form-control" id="CheckOut" placeholder="Add dates">
                </div>
 
-               <div class="form-group col-lg-9">
+               <div class="form-group col-lg-12">
                   <label for="Guests">Guests </label>
                   <select id="Guests" name="guests" class="form-control">
                      <option value="1">1000 guests</option>
@@ -42,7 +40,7 @@
                   </select>
                </div>
 
-               <div class="form-group col-lg-6">
+               <div class="form-group col-lg-12">
                   <button type="submit" class="btn btn-outline-warning btn-search">Search</button>
                </div>
             </form>
@@ -50,7 +48,9 @@
       </div>
    </div>
 </div>
-
+<br>
+<%= link_to 'Explore worlds nearby', planets_path, type:"button", class:"btn btn-light rental-planet-main-btn"%>
+<br>
 <div class="moons-satellites">
   <div class="cards-smaller">
 
