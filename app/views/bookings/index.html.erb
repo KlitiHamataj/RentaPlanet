@@ -13,15 +13,24 @@
         <th>Name of planet</th>
         <th>Number of guests</th>
         <th>Starting date</th>
-        <th>Ending data</th>
+        <th>Ending date</th>
+        <% if params[:query] == 'sent' %>
+          <th>To</th>
+        <% else  %>
+          <th>By</th>
+        <% end %>
       </tr>
       <% @bookings.each do |booking| %>
         <tr>
-          <td><%= booking.planet.name %></td>
+          <td> <%= link_to booking.planet.name, planet_path(booking.planet) %> </td>
           <td><%= booking.number_of_guests %> </td>
           <td><%= booking.start_date %></td>
           <td><%= booking.end_date %></td>
-          <td><%= booking.user.username %></td>
+          <% if params[:query] == 'sent' %>
+            <td><%= booking.planet.user.username %></td>
+          <% else  %>
+            <td><%= booking.user.username %></td>
+          <% end %>
         </tr>
         <% end %>
     </table>
