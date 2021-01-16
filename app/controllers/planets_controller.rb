@@ -7,6 +7,12 @@ class PlanetsController < ApplicationController
     else
       @planets = Planet.all
     end
+    @markers = @planets.geocoded.map do |planet|
+      {
+        lat: planet.latitude,
+        lng: planet.longitude
+      }
+    end
   end
 
   def show
