@@ -1,12 +1,12 @@
 // Specific CSS for your home-page
 @font-face {
    font-family: 'OneDay';
-   src: url('/assets/OneDay.otf')
+   src: font-url('/assets/OneDay.otf')
 }
 
 @font-face {
   font-family: 'Stellar-light';
-  src: url('/assets/Stellar-light.otf');
+  src: font-url('/assets/Stellar-light.otf');
 }
 
 .banner {
@@ -77,7 +77,5 @@
 }
 
 .moons-satellites {
-    margin-top: 50px;
-    margin-bottom: 30px;
-    margin-left: 205px;
+  margin: 50px 0px 30px 205px;
 }
