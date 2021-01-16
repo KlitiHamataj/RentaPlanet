@@ -13,7 +13,6 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item active">
-
           <%= link_to "Planets", planets_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
@@ -22,7 +21,7 @@
         <li class="nav-item dropdown">
           <%= image_tag "user-astronaut.svg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "My planets", "#", class: "dropdown-item" %>
+            <%= link_to "My planets", planets_path(query:'my_planets'), class: "dropdown-item" %>
             <%= link_to "Requests Sent", bookings_path(query: 'sent'), class: "dropdown-item" %>
             <%= link_to "Requests Received", bookings_path(query: 'received'), class: "dropdown-item" %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>

@@ -13,3 +13,33 @@
   padding: 20px;
   border: 1px solid rgb(230,230,230);
 }
+
+.cards-smaller {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.cards-moons-satellites {
+  flex-basis: 25%;
+}
+
+.cards-moons-satellites h3 {
+  margin-top: 8px;
+  margin-bottom: 0px;
+  font-family: 'Stellar-light';
+  font-size: 16px;
+  color: black;
+}
+
+.cards-moons-satellites p {
+  font-family: 'Stellar-light';
+  font-size: 12px;
+  margin-bottom: 8px;
+  color: black;
+  padding-left: 0px;
+}
+
+.cards-moons-satellites img {
+  border-radius: 10px;
+}
