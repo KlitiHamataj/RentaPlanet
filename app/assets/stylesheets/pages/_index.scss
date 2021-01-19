@@ -17,6 +17,9 @@
 
   .container-planets {
     padding: 0px 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
   }
 
   .card-planet {
@@ -24,6 +27,7 @@
     border: 1px solid rgb(230,230,230);
     box-shadow: 0 0 5px rgb(230,230,230);
     padding-bottom: 20px;
+    padding-top: 30px;
   }
 
   .card-planet-price {
