@@ -1,0 +1,33 @@
+<div class="container">
+  <h1> <%= @user.username %>'s Profile </h1>
+
+  <% if current_user == @user  %>
+    <div>
+      <h5>Your Informations</h5>
+      <p> Email: <%= @user.email %> <%= link_to "<i class='fas fa-pen'></i>".html_safe, edit_user_registration_path %> </p>
+      <p>Password: **************** <%= link_to "<i class='fas fa-pen'></i>".html_safe, edit_user_registration_path %></p>
+      <p>Description <%= link_to "<i class='fas fa-pen'></i>".html_safe, edit_user_registration_path %></p>
+      <p>Change Avatar <%= link_to "<i class='fas fa-pen'></i>".html_safe, edit_user_registration_path %></p>
+    </div>
+  <% end %>
+  <% if @user.avatar.attached? %>
+    <%= cl_image_tag(@user.avatar.key, :transformation=>[
+      {width: 400, height: 400, gravity: "face", radius: "max", crop: "crop"},
+      {width: 200, crop: "scale"}
+      ])  %>
+  <% end %>
+  <div>
+    <h5>Description: </h5>
+    <p><%= @user.description unless @user.description.nil? %></p>
+    <h5>Planets</h5>
+    <% @user.planets.each do |planet| %>
+      <p><%= link_to planet.name, planet_path(planet) %></p>
+    <% end %>
+  </div>
+
+  <% if current_user == @user  %>
+    <div>
+      <%= link_to "Delete my account", registration_path(current_user), data: { confirm: "Are you sure? There is no turning back" }, method: :delete %>
+    </div>
+  <% end %>
+</div>

@@ -10,7 +10,8 @@ class PlanetsController < ApplicationController
     @markers = @planets.geocoded.map do |planet|
       {
         lat: planet.latitude,
-        lng: planet.longitude
+        lng: planet.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { planet: planet })
       }
     end
   end
@@ -37,7 +38,7 @@ class PlanetsController < ApplicationController
 
   def update
     if @planet.update(planet_params)
-      redirect_to planets_path, notice: 'Planet is updated'
+      redirect_to planet_path(@planet), notice: 'Planet is updated'
     else
       render :edit
     end
@@ -57,5 +58,4 @@ class PlanetsController < ApplicationController
   def set_planet
     @planet = Planet.find(params[:id])
   end
-
 end

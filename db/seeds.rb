@@ -1,11 +1,12 @@
 puts 'Creating users...'
 
 5.times do
-  User.create!(
+  user = User.create!(
       email: Faker::Internet.email,
       username: Faker::Name.first_name,
       password: 'password',
   )
+  user.avatar.attach(io: File.open('app/assets/images/user-astronaut.svg'), filename: 'file.svg', content_type: 'image/svg')
 end
 
 puts 'Users created...'
