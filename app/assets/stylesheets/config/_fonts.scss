@@ -15,3 +15,13 @@ $headers-font: "Nunito", "Helvetica", "sans-serif";
 //        font-url('FontFile.ttf') format('truetype')
 // }
 // $my-font: "Font Name";
+
+@font-face {
+   font-family: 'OneDay';
+   src: font-url('/assets/OneDay.otf')
+}
+
+@font-face {
+  font-family: 'Stellar-light';
+  src: font-url('/assets/Stellar-light.otf');
+}
