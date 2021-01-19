@@ -2,8 +2,9 @@ class PlanetsController < ApplicationController
   before_action :set_planet, only: [:show, :edit, :update, :destroy]
 
   def index
-    if params[:query] == "my_planets" || params[:query].present?
+    if params[:query] == "my_planets"
       @planets = Planet.where("user_id = ?", current_user)
+    elsif  params[:query].present?
       sql_query = "name ILIKE :query OR address ILIKE :query"
       @planets = Planet.where(sql_query, query: "%#{params[:query]}%")
     else
