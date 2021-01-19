@@ -3,7 +3,7 @@
 
   <% if current_user == @user  %>
     <div>
-      <h5>Your Infomations</h5>
+      <h5>Your Informations</h5>
       <p> Email: <%= @user.email %> <%= link_to "<i class='fas fa-pen'></i>".html_safe, edit_user_registration_path %> </p>
       <p>Password: **************** <%= link_to "<i class='fas fa-pen'></i>".html_safe, edit_user_registration_path %></p>
       <p>Description <%= link_to "<i class='fas fa-pen'></i>".html_safe, edit_user_registration_path %></p>
