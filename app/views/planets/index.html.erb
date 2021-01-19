@@ -2,6 +2,17 @@
   <br>
   <h1>All planets</h1>
   <br>
+  <div class="container pb-5">
+    <%= form_tag planets_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find a planet"
+      %>
+      <%= submit_tag "Search", class: "btn btn-outline-warning" %>
+    <% end %>
+  </div>
+
   <div class="container-planets">
     <% @planets.each do |planet| %>
     <div class="card-planet-index">
