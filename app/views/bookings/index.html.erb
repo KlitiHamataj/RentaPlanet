@@ -27,9 +27,9 @@
           <td><%= booking.start_date %></td>
           <td><%= booking.end_date %></td>
           <% if params[:query] == 'sent' %>
-            <td><%= booking.planet.user.username %></td>
+            <td><%= link_to booking.planet.user.username, user_path(booking.planet.user) %></td>
           <% else  %>
-            <td><%= booking.user.username %></td>
+            <td><%= link_to booking.user.username, user_path(booking.user) %></td>
           <% end %>
           <% if current_user == booking.user %>
             <td><%= link_to 'Delete this booking', booking_path(booking), data: { confirm: "Are you sure?" }, :method => :delete %></td>
