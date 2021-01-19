@@ -11,10 +11,7 @@
     </div>
   <% end %>
   <% if @user.avatar.attached? %>
-    <%= cl_image_tag(@user.avatar.key, :transformation=>[
-      {width: 400, height: 400, gravity: "face", radius: "max", crop: "crop"},
-      {width: 200, crop: "scale"}
-      ])  %>
+    <%= cl_image_tag(@user.avatar.key, width: 200, height: 200, gravity: "face", crop: "thumb", radius: "max") %>
   <% end %>
   <div>
     <h5>Description: </h5>
