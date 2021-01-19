@@ -2,25 +2,19 @@ class PlanetsController < ApplicationController
   before_action :set_planet, only: [:show, :edit, :update, :destroy]
 
   def index
-    if params[:query] == "my_planets"
+    if params[:query] == "my_planets" || params[:query].present?
       @planets = Planet.where("user_id = ?", current_user)
+      sql_query = "name ILIKE :query OR address ILIKE :query"
+      @planets = Planet.where(sql_query, query: "%#{params[:query]}%")
     else
       @planets = Planet.all
     end
-<<<<<<< HEAD
-
-    if params[:query].present?
-      @planets = Planet.where("name ILIKE ?", "%#{params[:query]}%")
-    else
-      @planets = Planet.all
-=======
     @markers = @planets.geocoded.map do |planet|
       {
         lat: planet.latitude,
         lng: planet.longitude,
         infoWindow: render_to_string(partial: "info_window", locals: { planet: planet })
       }
->>>>>>> master
     end
   end
 
