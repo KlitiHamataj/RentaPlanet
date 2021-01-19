@@ -18,7 +18,7 @@
           <th>To</th>
         <% else  %>
           <th>By</th>
-        <% end %>
+        <% end %>  
       </tr>
       <% @bookings.each do |booking| %>
         <tr>
@@ -30,6 +30,9 @@
             <td><%= booking.planet.user.username %></td>
           <% else  %>
             <td><%= booking.user.username %></td>
+          <% end %>
+          <% if current_user == booking.user %>
+            <td><%= link_to 'Delete this booking', booking_path(booking), data: { confirm: "Are you sure?" }, :method => :delete %></td>
           <% end %>
         </tr>
         <% end %>
