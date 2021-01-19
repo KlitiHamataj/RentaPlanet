@@ -4,6 +4,9 @@ class PlanetsController < ApplicationController
   def index
     if params[:query] == "my_planets"
       @planets = Planet.where("user_id = ?", current_user)
+    elsif  params[:query].present?
+      sql_query = "name ILIKE :query OR address ILIKE :query"
+      @planets = Planet.where(sql_query, query: "%#{params[:query]}%")
     else
       @planets = Planet.all
     end
