@@ -37,7 +37,7 @@ class PlanetsController < ApplicationController
 
   def update
     if @planet.update(planet_params)
-      redirect_to planets_path, notice: 'Planet is updated'
+      redirect_to planet_path(@planet), notice: 'Planet is updated'
     else
       render :edit
     end
@@ -57,5 +57,4 @@ class PlanetsController < ApplicationController
   def set_planet
     @planet = Planet.find(params[:id])
   end
-
 end
