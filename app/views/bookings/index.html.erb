@@ -13,15 +13,27 @@
         <th>Name of planet</th>
         <th>Number of guests</th>
         <th>Starting date</th>
-        <th>Ending data</th>
+        <th>Ending date</th>
+        <% if params[:query] == 'sent' %>
+          <th>To</th>
+        <% else  %>
+          <th>By</th>
+        <% end %>  
       </tr>
       <% @bookings.each do |booking| %>
         <tr>
-          <td><%= booking.planet.name %></td>
+          <td> <%= link_to booking.planet.name, planet_path(booking.planet) %> </td>
           <td><%= booking.number_of_guests %> </td>
           <td><%= booking.start_date %></td>
           <td><%= booking.end_date %></td>
-          <td><%= booking.user.username %></td>
+          <% if params[:query] == 'sent' %>
+            <td><%= link_to booking.planet.user.username, user_path(booking.planet.user) %></td>
+          <% else  %>
+            <td><%= link_to booking.user.username, user_path(booking.user) %></td>
+          <% end %>
+          <% if current_user == booking.user %>
+            <td><%= link_to 'Delete this booking', booking_path(booking), data: { confirm: "Are you sure?" }, :method => :delete %></td>
+          <% end %>
         </tr>
         <% end %>
     </table>
