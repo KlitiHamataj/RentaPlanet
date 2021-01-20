@@ -1,0 +1,47 @@
+.log-in {
+  height: 510px;
+  background-image: image-url('Elia.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right 40% bottom 45%;
+
+  .form-inputs {
+    width: 600px;
+    font-family: "Stellar-light";
+    text-shadow: 0 0 10px #FFFFFF;
+    margin-left: 200px;
+    opacity: 0.9;
+    color: white;
+    border: 1px solid rgb(230,230,230);
+    box-shadow: 0 0 5px rgb(230,230,230);
+    padding: 15px;
+    border-radius: 5px;
+  }
+
+  .form-actions {
+    margin: 20px 0 20px 200px;
+  }
+
+  .btn {
+    opacity: 0.9;
+    border-radius: 5px;
+    font-family: sans-serif;
+    color: white;
+  }
+
+  h2 {
+    padding: 50px 0 20px 200px;
+    margin-bottom: 0;
+    font-family: "OneDay";
+    color: #FFFFFF;
+    text-shadow: 0 0 10px #FFFFFF;
+    letter-spacing: 0.1em;
+  }
+
+  a {
+    font-family: "Stellar-light";
+    padding-left: 200px;
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+}
