@@ -54,23 +54,17 @@
 <div class="moons-satellites">
   <div class="cards-smaller">
     <% @planets.each do |planet| %>
-    <div class="card-planet-index">
+    <div class="cards-moons-satellites">
       <% if planet.photos.attached? %>
         <%= cl_image_tag planet.photos.first.key, height: 200, width: 200, crop: :fill %>
       <% else %>
         <%= image_tag('earth.jpg', height: 200, width: 200) %>
       <% end %>
-      <div class="card-planet-infos">
         <br>
-        <h2><%= planet.name %></h2>
-        <h3><%= planet.address %></h3>
-        <p><%= planet.description %></p>
+        <h3><%= link_to planet.name, planet_path(planet) %></h3>
+        <p><%= planet.address %></p>
         <br>
-        <h2 class="card-planet-price"><%= planet.price %></h2>
-        <br>
-        <%= link_to "See More", planet_path(planet) %>
       <br>
-      </div>
     </div>
     <% end %>
   </div>
