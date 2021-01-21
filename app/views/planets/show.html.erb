@@ -1,33 +1,29 @@
-<div class="container">
-  <div class="card" style="width: 22rem; margin: 10px">
-     <div class="card-body">
-       <h1 class="card-title">Name: <%= @planet.name %></h1>
-       <h5 class="card-text">Address of the Space Station: <%= @planet.address %></h5>
-       <h5 class="card-text">Price: <%= @planet.price %></h5>
-       <h5 class="card-text">Guest number: <%= @planet.number_guests %></h5>
-       <%= link_to "Back", planets_path%>
-       <% unless current_user == @planet.user  %>
-       	 <%= link_to "Make a booking", new_planet_booking_path(@planet) %>
-       <% end %>
-       <% if current_user == @planet.user %>
-         <%= link_to "Edit", edit_planet_path(@planet) %>
-         <%= link_to "Delete", @planet, data: { confirm: "Are you sure?" }, :method => :delete %>
-       <% end %>
-     </div>
-  </div>
-
-  <div class="card" style="width: 22rem; margin: 10px">
-     <div class="card-body">
-       <h1 class="card-title">My bookings</h1>
-       <% if @planet.bookings.any? %>
-          <% @planet.bookings.each do |booking| %>
-            <h5 class="card-text"><%= booking.start_date %> - <%= booking.end_date %></h5>
-          <% end %>
-       <% else %>
-        <h5 class="card-text">You currently have no bookings for <%= @planet.name %></h5>
-       <% end %>
-     </div>
+<div class="carousel-container">
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+      <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <%= cl_image_tag @planet.photos.first.key, class: "d-block w-100" %>
+      </div>
+      <div class="carousel-item">
+        <%= image_tag('europa.jpg', class: "d-block w-100") %>
+      </div>
+      <div class="carousel-item">
+        <%= image_tag('jupiter.jpg', class: "d-block w-100") %>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </a>
   </div>
 </div>
-
 
