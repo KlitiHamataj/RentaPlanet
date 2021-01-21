@@ -7,4 +7,5 @@ Rails.application.routes.draw do
     resources :bookings, only: [:create, :new]
   end
   resources :bookings, only: [:index, :destroy]
+  patch "bookings/:id", to: "bookings#status!", as: :status_booking
 end
