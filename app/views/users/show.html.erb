@@ -1,21 +1,20 @@
 <div class="background-black">
   <div class="container">
     <h1> <%= @user.username %>'s Profile </h1>
-
-    <% if current_user == @user  %>
-      <div>
-        <h5>Your Informations</h5>
-        <p> Email: <%= @user.email %> <%= link_to "<i class='fas fa-pen'></i>".html_safe, edit_user_registration_path %> </p>
-        <p>Password: **************** <%= link_to "<i class='fas fa-pen'></i>".html_safe, edit_user_registration_path %></p>
-        <p>Description <%= link_to "<i class='fas fa-pen'></i>".html_safe, edit_user_registration_path %></p>
-        <p>Change Avatar <%= link_to "<i class='fas fa-pen'></i>".html_safe, edit_user_registration_path %></p>
-      </div>
-    <% end %>
     <% if @user.avatar.attached? %>
       <%= cl_image_tag(@user.avatar.key, width: 200, height: 200, gravity: "face", crop: "thumb", radius: "max") %>
     <% end %>
-    <div>
-      <h5>Description: </h5>
+    <% if current_user == @user  %>
+      <div>
+        <h5>Your Informations</h5>
+        <p> Email: <%= @user.email %> </p>
+        <p>Password: **************** </p>
+        <p> Edit profile <%= link_to "<i class='fas fa-pen', style=color:white></i>".html_safe, edit_user_registration_path %></p>
+      </div>
+    <% end %>
+
+    <div >
+      <h4>About <%= @user.username %>: </h4>
       <p><%= @user.description unless @user.description.nil? %></p>
       <h5>Planets</h5>
       <% @user.planets.each do |planet| %>
