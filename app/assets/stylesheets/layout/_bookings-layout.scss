@@ -1,12 +1,64 @@
-.container {
-  padding-top: 30px;
-}
+.background-black {
+  height: 750px;
+  background-image: image-url('solar_eclipse.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: "OneDay";
+  color: #FFFFFF;
+  text-shadow: 0 0 10px #FFFFFF;
+  letter-spacing: 0.1em;
 
-table {
-  width: 75%;
-}
+  .request h1 {
+    font-family: "OneDay";
+    padding: 45px 0 0 115px;
+  }
 
-table, th, td {
-  border: 1px solid black;
-  text-align: center;
+  .bookings {
+    padding-top: 65px;
+  }
+
+  .btn-back {
+    margin: 20px 0 0 160px;
+    border-radius: 5px;
+    font-family: sans-serif;
+    color: #f58634;
+    text-shadow: none;
+  }
+
+  .btn:hover {
+    color: white;
+  }
+
+  .no-booking {
+    font-family: "Stellar-light";
+    margin: 0 0 0 160px;
+  }
+
+  table {
+    background: black;
+    opacity: 0.8;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  a {
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+
+  table, th, td {
+    border: 1px solid rgb(230,230,230);
+    box-shadow: 0 0 5px rgb(230,230,230);
+    text-align: center;
+    padding: 15px;
+
+    th {
+      font-size: 20px;
+    }
+
+    td {
+      font-family: "Stellar-light";
+    }
+  }
 }
