@@ -18,10 +18,10 @@ $headers-font: "Nunito", "Helvetica", "sans-serif";
 
 @font-face {
    font-family: 'OneDay';
-   src: font-url('/assets/OneDay.otf')
+   src: asset-url('OneDay.otf')
 }
 
 @font-face {
   font-family: 'Stellar-light';
-  src: font-url('/assets/Stellar-light.otf');
+  src: asset-url('Stellar-light.otf');
 }
