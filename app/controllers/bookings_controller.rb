@@ -1,5 +1,6 @@
 class BookingsController < ApplicationController
   before_action :set_planet, only: [:new, :create]
+  before_action :set_booking, only: [:destroy, :status!]
 
   def index
     if params[:query] == 'sent'
@@ -25,15 +26,27 @@ class BookingsController < ApplicationController
   end
 
   def destroy
-    @booking = Booking.find(params[:id])
     @booking.destroy
     redirect_to bookings_path, notice: 'Your booking has been deleted successfully.'
+  end
+
+  def status!
+    if params[:query] == 'accepted'
+      @booking.update(status: 'accepted')
+    else
+      @booking.update(status: 'rejected')
+    end
+    redirect_to bookings_path
   end
 
   private
 
   def set_planet
     @planet = Planet.find(params[:planet_id])
+  end
+
+  def set_booking
+    @booking = Booking.find(params[:id])
   end
 
   def booking_params
