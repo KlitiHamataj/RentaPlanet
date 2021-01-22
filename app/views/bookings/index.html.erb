@@ -15,30 +15,45 @@
           <th>Number of Guests</th>
           <th>Check-in</th>
           <th>Check-out</th>
+          <th>Status</th>
+
           <% if params[:query] == 'sent' %>
             <th>To</th>
           <% else  %>
             <th>By</th>
+            <th>Your Decision?</th>
           <% end %>
-          <th>Delete</th>
+
+          <% if current_user == @bookings.first.user %>
+            <th>Delete</th>
+          <% end %>
         </tr>
+
         <% @bookings.each do |booking| %>
           <tr>
             <td> <%= link_to booking.planet.name, planet_path(booking.planet) %> </td>
             <td><%= booking.number_of_guests %> </td>
             <td><%= booking.start_date %></td>
             <td><%= booking.end_date %></td>
+            <td><%= booking.status.upcase %></td>
+
             <% if params[:query] == 'sent' %>
               <td><%= link_to booking.planet.user.username, user_path(booking.planet.user) %></td>
             <% else  %>
               <td><%= link_to booking.user.username, user_path(booking.user) %></td>
+              <td> <%= link_to "Accept", status_booking_path(booking, query: 'accepted'), method: :patch if booking.status == 'pending'%> /
+                   <%= link_to "Refuse", status_booking_path(booking, query: 'refused'), data: { confirm: "Are you sure?" }, method: :patch if booking.status == 'pending'%>
+              </td>
             <% end %>
+
             <% if current_user == booking.user %>
               <td><%= link_to 'Cancel this booking', booking_path(booking), data: { confirm: "Are you sure?" }, :method => :delete %></td>
             <% end %>
           </tr>
           <% end %>
+
       </table>
+
     <% else %>
         <h5 class="no-booking">You currently have no bookings!</h5>
     <% end %>

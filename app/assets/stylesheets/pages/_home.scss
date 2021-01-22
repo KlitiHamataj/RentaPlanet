@@ -4,6 +4,7 @@
   background-image: image-url('banner.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
 }
 
 .text-banner h1, p {
@@ -21,30 +22,6 @@
 
 .text-banner p {
   font-size: 16px;
-}
-
-.search-form {
-  width: 500px;
-  margin-top: 50px;
-  margin-left: 475px;
-  opacity: 0.8;
-  font-family: 'Stellar-light';
-  color: #FFFFFF;
-  text-shadow: 0 0 10px #FFFFFF;
-  background: rgba(0,0,0,0.5);
-  border-radius: 5px;
-  padding: 10px 10px 0px 10px;
-  border: 1px solid rgb(230,230,230);
-  box-shadow: 0 0 5px rgb(230,230,230);
-}
-
-.form-control {
-  border-radius: 5px;
-  font-family: sans-serif;
-}
-
-.btn-search {
-  border-radius: 5px;
 }
 
 .solar-system {
