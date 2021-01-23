@@ -19,18 +19,23 @@
     justify-content: center;
   }
 
-  .btn-back {
-    font-family: "Stellar-light";
-    margin: 20px 0 0 110px;
-    border-radius: 5px;
-    color: #f58634;
-    text-shadow: none;
-    letter-spacing: 0;
-  }
+  .centered-btn {
+    display: flex;
+    justify-content: center;
 
-  .btn-back:hover {
-    color: white;
-  }
+    .btn-back {
+      margin-top: 20px;
+      font-family: "Stellar-light";
+      border-radius: 5px;
+      color: #f58634;
+      text-shadow: none;
+      letter-spacing: 0;
+    }
+
+    .btn-back:hover {
+      color: white;
+    }
+}
 
   .no-booking {
     font-family: "Stellar-light";
