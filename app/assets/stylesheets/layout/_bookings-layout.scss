@@ -15,11 +15,13 @@
 
   .bookings {
     padding-top: 65px;
+    display: flex;
+    justify-content: center;
   }
 
   .btn-back {
     font-family: "Stellar-light";
-    margin: 20px 0 0 200px;
+    margin: 20px 0 0 110px;
     border-radius: 5px;
     color: #f58634;
     text-shadow: none;
@@ -32,11 +34,7 @@
 
   .no-booking {
     font-family: "Stellar-light";
-    margin: 0 0 0 200px;
-  }
-
-  table {
-    margin-left: 200px;
+    text-align: left;
   }
 
   a {
