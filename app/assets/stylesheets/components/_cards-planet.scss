@@ -1,18 +1,18 @@
-.cards {
-  display: flex;
-  justify-content: space-around;
-}
+// .cards-planet-solar-system {
+//   margin-bottom: 30px;
+//   width: 250px;
+//   height: 250px;
+//   border-radius: 5px;
+//   box-shadow: 0 0 5px rgb(230,230,230);
+//   text-align: right;
+//   padding: 20px;
+//   border: 1px solid rgb(230,230,230);
+// }
 
-.cards-planet-solar-system {
-  margin-bottom: 30px;
-  width: 250px;
-  height: 250px;
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgb(230,230,230);
-  text-align: right;
-  padding: 20px;
-  border: 1px solid rgb(230,230,230);
-}
+// .cards {
+//   display: flex;
+//   justify-content: space-around;
+// }
 
 .card-planet-index {
   border-radius: 5px;
@@ -23,32 +23,44 @@
   margin-bottom: 50px;
 }
 
-.cards-smaller {
+.container-best-planets {
+  padding: 50px 0;
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
+  flex-direction: row;
+
+  img {
+  border-radius: 5px;
+  }
 }
 
-.cards-moons-satellites {
-  flex-basis: 25%;
+.cards-best-planets .cards-planet-infos {
+  display: flex;
+  position: relative;
 }
 
-.cards-moons-satellites h3 {
-  margin-top: 8px;
-  margin-bottom: 0px;
-  font-family: 'Stellar-light';
-  font-size: 16px;
+.cards-planet-infos {
+  margin-top: 10px;
+  position: absolute;
+  flex-direction: column;
+
+  h3 {
+    font-family: 'Stellar-light';
+    font-size: 16px;
+    color: black;
+    margin: 0;
+  }
+
+  p {
+    font-family: 'Stellar-light';
+    font-size: 12px;
+    color: black;
+    padding-left: 0px;
+    margin: 0;
+  }
+
+  a {
+  text-decoration: none;
   color: black;
-}
-
-.cards-moons-satellites p {
-  font-family: 'Stellar-light';
-  font-size: 12px;
-  margin-bottom: 8px;
-  color: black;
-  padding-left: 0px;
-}
-
-.cards-moons-satellites img {
-  border-radius: 10px;
+  }
 }
