@@ -1,5 +1,7 @@
 .container-index {
-  background-color: black;
+  background-image: image-url('universe-black.jpg');
+  background-size: contain;
+  background-repeat: repeat;
   padding-bottom: 100px;
 
   img {

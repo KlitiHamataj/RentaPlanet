@@ -1,9 +1,8 @@
 .background-black {
   height: 750px;
-  background-image: image-url('solar_eclipse.jpeg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-image: image-url('universe-black.jpeg');
+  background-size: contain;
+  background-repeat: repeat;
   font-family: "OneDay";
   color: #FFFFFF;
   text-shadow: 0 0 10px #FFFFFF;
@@ -19,27 +18,25 @@
   }
 
   .btn-back {
-    margin: 20px 0 0 160px;
+    font-family: "Stellar-light";
+    margin: 20px 0 0 200px;
     border-radius: 5px;
-    font-family: sans-serif;
     color: #f58634;
     text-shadow: none;
+    letter-spacing: 0;
   }
 
-  .btn:hover {
+  .btn-back:hover {
     color: white;
   }
 
   .no-booking {
     font-family: "Stellar-light";
-    margin: 0 0 0 160px;
+    margin: 0 0 0 200px;
   }
 
   table {
-    background: black;
-    opacity: 0.8;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 200px;
   }
 
   a {
