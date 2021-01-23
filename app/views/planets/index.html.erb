@@ -15,7 +15,7 @@
 
   <div class="container-planets">
     <% @planets.each do |planet| %>
-    <div class="card-planet-index">
+    <div class="card-planet-index" data-aos="fade-right" data-aos-duration="1000">
 
       <% if planet.photos.attached? %>
         <%= cl_image_tag planet.photos.first.key, height: 200, width: 200, crop: :fill %>
