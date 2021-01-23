@@ -1,16 +1,14 @@
 .rental-planet-main-btn {
   font-family: 'Stellar-light';
-  box-shadow:inset 0px 1px 0px 0px #ffffff;
   background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
   background-color:#ffffff;
   border-radius: 5px;
-  border: 1px solid #dcdcdc;
   cursor: pointer;
   color: #666666;
   opacity: 0.9;
   text-align: center;
   font-size: 16px;
-  padding: 5px;
+  padding: 10px;
   text-decoration: none;
   text-shadow: 0px 1px 0px #ffffff;
   width: 25%;
@@ -20,9 +18,13 @@
   left: 37.5%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  border-color: #dcdcdc;
+  color: black;
+  box-shadow: 0 0 40px 40px #ffffff inset, 0 0 0 0 #ffffff;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
 }
 
 .rental-planet-main-btn:hover {
-  background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
-  background-color:#f6f6f6;
+  box-shadow: 0 0 10px 0 #ffffff inset, 0 0 10px 4px #ffffff;
 }
