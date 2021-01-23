@@ -7,25 +7,20 @@
      <%= link_to 'Explore worlds nearby', planets_path, type:"button", class:"btn btn-light"%>
    </div>
 </div>
-<br>
-<br>
-<div class="moons-satellites">
-  <div class="cards-smaller">
-    <% @planets.each do |planet| %>
-    <div class="cards-moons-satellites">
-      <% if planet.photos.attached? %>
-        <%= cl_image_tag planet.photos.first.key, height: 200, width: 200, crop: :fill %>
-      <% else %>
-        <%= image_tag('earth.jpg', height: 200, width: 200) %>
-      <% end %>
-        <br>
-        <h3><%= link_to planet.name, planet_path(planet) %></h3>
-        <p><%= planet.address %></p>
-        <br>
-      <br>
-    </div>
+
+<h2>Best Planets</h2>
+<div class="container-best-planets">
+  <% @planets.each do |planet| %>
+  <div class="cards-best-planets">
+    <% if planet.photos.attached? %>
+      <%= cl_image_tag planet.photos.first.key, height: 200, width: 200, crop: :fill %>
+    <% else %>
+      <%= image_tag('earth.jpg', height: 200, width: 200) %>
     <% end %>
+    <div class="cards-planet-infos">
+      <h3><%= link_to planet.name, planet_path(planet) %></h3>
+      <p><%= planet.address %></p>
+    </div>
   </div>
+  <% end %>
 </div>
-
-
