@@ -1,5 +1,5 @@
 .carousel-container {
-    width: 800px;
+    width: 600px;
     margin: auto;  
     padding: 20px 0;
 }
@@ -19,8 +19,8 @@
 
 .container-show .card-show {
     position: relative;
-    width: 300px;
-    height: 420px;
+    width: 250px;
+    height: 350px;
     background: #fff;
     margin: 20px;
     border-radius: 20px;
@@ -41,7 +41,7 @@
 
 .container-show .card-show .circle-show .card-header {
     color: #fff;
-    font-size: 3.5em;
+    font-size: 2.5em;
     padding: 30px 0;
     font-family: 'Stellar-light';
 }
@@ -51,6 +51,7 @@
     bottom: 10px;
     padding: 20px;
     text-align: center;
+    font-size: 24px;
 }
 
 .container-show .card-show .content-show .text-show {
@@ -95,9 +96,9 @@
 
 .btn-change-border {
   display: inline-block;
-  color: #020e08;
+  color: #105da5;
   padding: 18px 80px;
-  border: 4px solid #020e08;
+  border: 4px solid #105da5;
   border-radius: 6px;
   display: inline-block;
   transition: all 0.3s ease 0s;
@@ -106,16 +107,16 @@
 }
 
 .btn-change-border:hover {
-  color: #746d6d;
+  color: #056dce;
   border-radius: 30px;
-  border-color: #746d6d;
+  border-color: #056dce;
   transition: all 0.3s ease 0s;
   text-decoration: none;
 }
 
 .btn-change-border-edit {
   display: inline-block;
-  color: #9b9946;
+  color: #f3ef1e;;
   padding: 18px 40px;
   border: 4px solid #f3ef1e;
   border-radius: 6px;
@@ -126,7 +127,7 @@
 }
 
 .btn-change-border-edit:hover {
-  color: #8e9621;
+  color: #f7d411;
   border-radius: 30px;
   border-color: #f7d411;
   transition: all 0.3s ease 0s;
@@ -135,7 +136,7 @@
 
 .btn-change-border-delete {
   display: inline-block;
-  color: #492212;
+  color: #d84c4c;
   padding: 18px 40px;
   border: 4px solid #d84c4c;
   border-radius: 6px;
@@ -146,7 +147,7 @@
 }
 
 .btn-change-border-delete:hover {
-  color:#492212;
+  color:#ee0c0c;
   border-radius: 30px;
   border-color: #ee0c0c;
   transition: all 0.3s ease 0s;
